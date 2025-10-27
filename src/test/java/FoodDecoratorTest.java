@@ -4,24 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FoodDecoratorTest {
 
-    @Test
-    void getNameModifier() {
-    }
+    private Hamburger myHamburger = new Hamburger();
 
-    @Test
-    void setNameModifier() {
-    }
 
-    @Test
-    void getCostModifier() {
-    }
 
-    @Test
-    void setCostModifier() {
-    }
+
 
     @Test
     void getName() {
+
     }
 
     @Test
