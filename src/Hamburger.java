@@ -1,6 +1,15 @@
 public class Hamburger extends FoodItem{
     public Hamburger(){
-        setName("Hamburger");
-        setCost(8.00);
+
+    }
+
+    @Override
+    public String getName() {
+        return "Hamburger";
+    }
+
+    @Override
+    public double getCost() {
+        return 8.00;
     }
 }

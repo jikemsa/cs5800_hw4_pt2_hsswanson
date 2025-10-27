@@ -1,22 +1,11 @@
 public abstract class FoodItem {
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
+    public abstract String getName();
+    public abstract double getCost();
     private String name;
     private double cost;
 
-
+    @Override
+    public String toString() {
+        return getName() +":" + getCost();
+    }
 }

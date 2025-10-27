@@ -1,4 +1,4 @@
-public abstract class FoodDecorator {
+public abstract class FoodDecorator extends FoodItem {
     protected FoodItem foodItem;
     private String nameModifier;
     private double costModifier;
@@ -21,15 +21,12 @@ public abstract class FoodDecorator {
 
 
     public String getName(){
-        String name = foodItem.getName();
-        name = name + getNameModifier();
-        return name;
+        return this.foodItem.getName();
+
     }
 
     public double getCost(){
-        double cost = foodItem.getCost();
-        cost = cost + getCostModifier();
-        return cost;
+        return this.foodItem.getCost();
     }
 
     public FoodDecorator(FoodItem fooditem){

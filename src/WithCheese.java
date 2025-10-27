@@ -1,7 +1,11 @@
 public class WithCheese extends FoodDecorator{
     public WithCheese(FoodItem foodItem){
         super(foodItem);
-        setCostModifier(0.25);
-        setNameModifier("+cheese");
+    }
+    public String getName(){
+        return foodItem.getName()+"+cheese";
+    }
+    public double getCost(){
+        return foodItem.getCost()+0.50;
     }
 }
