@@ -1,7 +1,11 @@
 public class WithKetchup extends FoodDecorator{
     public WithKetchup(FoodItem fooditem) {
         super(fooditem);
-        setCostModifier(0.05);
-        setNameModifier("+ketchup");
+    }
+    public String getName(){
+        return foodItem.getName()+"+ketchup";
+    }
+    public double getCost(){
+        return foodItem.getCost()+0.05;
     }
 }
