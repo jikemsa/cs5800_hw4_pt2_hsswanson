@@ -18,4 +18,16 @@ void main() {
     order1.addItem(new HotDog());
     IO.println(order1);
 
+
+    CustomerOrder order2 = new CustomerOrder();
+    order2.addItem(new WithOnions(new HotDog()));
+    order2.addItem(new WithCheese(new HotDog()));
+    order2.addItem(new WithKetchup(new HotDog()));
+    order2.addItem(new WithKetchup(new WithCheese(new WithOnions(new HotDog()))));
+    IO.println("Before Loyalty Discount:");
+    IO.println(order2);
+    IO.println("After Loyalty Discount:");
+    CustomerOrder discounterOrder2 =new LoyalCustomer(order2);
+    IO.println(discounterOrder2);
+
 }

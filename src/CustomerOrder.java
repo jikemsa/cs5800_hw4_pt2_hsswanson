@@ -24,10 +24,13 @@ public class CustomerOrder {
     @Override
     public String toString() {
         return "CustomerOrder{" +
-                "orderItems=" + orderItems +
+                "orderItems=" + getItems() +
                 "}Total Cost:"+getCost();
     }
     public CustomerOrder(){
         orderItems = new ArrayList<FoodItem>();
+    }
+    public CustomerOrder(ArrayList<FoodItem> items){
+        orderItems = items;
     }
 }
